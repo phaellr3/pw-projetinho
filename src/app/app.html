@@ -1,5 +1,31 @@
-<img [src]=imagem alt="">
-<p [hidden] = "fechado">{{mensagem}}</p>
-<button (click)="abrir()">Quebrar</button>
-<button (click)="limpar()">Limpar</button>
-<router-outlet />
+<div class="container">
+    <h1 class="text-center">Biscoito do MB</h1>
+    <img [src]=imagem alt="" class="rounded mx-auto d-block">
+    <div [hidden]= "div" class = "container-text">
+        <p [hidden] = "fechado"    >{{mensagem}}</p>
+    </div>
+    
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button (click)="abrir()" class="btn btn-outline-success" >Quebrar</button>
+        <button (click)="limpar()" class="btn btn-outline-warning">Limpar</button>
+    </div>
+    
+    
+    <router-outlet />
+</div>
+<style>
+    
+    .container-text{
+        
+        color: rgb(151, 83, 83);
+        border: 1px rgb(151, 83, 83) solid;
+        border-radius: 10px;
+        width: 50%;
+        justify-self: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 30px;
+        text-align: center; 
+    }
+    
+</style>
